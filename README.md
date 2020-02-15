@@ -1,6 +1,9 @@
 # ArtManager <br>
 ## 使用VS2012开发的串口设备管理工具软件源码
 <br>
+![image](https://github.com/houyaf/ArtManager/blob/master/ArtManager/res/11.png)
+<br>
+![image](https://github.com/houyaf/ArtManager/blob/master/ArtManager/res/22.png)
 <br>
 ### 支持下面这些功能：<br>
 
