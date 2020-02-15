@@ -1,0 +1,743 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+#include "verrsrc.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(简体，中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "#include ""verrsrc.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#include ""res\\ART.rc2""  // 非 Microsoft Visual C++ 编辑的资源\r\n"
+    "#include ""l.CHS\\afxres.rc""      // 标准组件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\ART_48.ico"
+IDR_ARTTYPE             ICON                    "res\\ARTDoc.ico"
+IDI_NETCONFIG           ICON                    "res\\96.ico"
+IDI_ICON1               ICON                    "res\\24.ico"
+IDI_ICON2               ICON                    "res\\port.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\toolbar1.bmp"
+IDB_CONFIG              BITMAP                  "res\\configure_32.bmp"
+IDB_EXIT                BITMAP                  "res\\exit.bmp"
+IDB_MONITOR             BITMAP                  "res\\monitor_32.bmp"
+IDB_PORTMAPP            BITMAP                  "res\\Port-mapping_32.bmp"
+IDB_PORTMONITOR         BITMAP                  "res\\PortMonitor_32.bmp"
+IDB_LOGO                BITMAP                  "res\\network.bmp"
+IDB_BMP_LOGO            BITMAP                  "res\\96.bmp"
+IDB_SC5083              BITMAP                  "res\\SC5083.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR 32, 32
+BEGIN
+    BUTTON      ID_APP_EXIT
+    SEPARATOR
+    BUTTON      ID_CONFIG
+    SEPARATOR
+    BUTTON      ID_MONITOR
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        MENUITEM SEPARATOR
+        MENUITEM "退出(&X)",                      ID_APP_EXIT
+    END
+    POPUP "功能(&C)"
+    BEGIN
+        MENUITEM "设备配置",                        ID_CONFIG
+        MENUITEM "设备监控",                        ID_MONITOR
+    END
+    POPUP "工具(&T)"
+    BEGIN
+        MENUITEM "串口终端",                        ID_CONSOLE
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "关于 ART(&A)...",               ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 231, 146
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 ART"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,14,14,20,20
+    LTEXT           "ART Administrator，1.0 版",IDC_STATIC,55,18,114,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2013",IDC_STATIC,55,104,114,8
+    DEFPUSHBUTTON   "确定",IDOK,83,125,50,14,WS_GROUP
+    LTEXT           "art.inc",IDC_STATIC,53,89,114,8
+END
+
+IDR_MAINFRAME DIALOGEX 0, 0, 187, 16
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+END
+
+IDD_ARTTASKVIEW DIALOGEX 0, 0, 112, 187
+STYLE DS_SETFONT | DS_3DLOOK | DS_FIXEDSYS | WS_CHILD
+FONT 9, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "Static",IDC_STATIC_FUNC,15,7,84,13
+    CONTROL         "",IDC_STATIC,"Static",SS_GRAYRECT | SS_SUNKEN,7,24,100,1
+    LTEXT           "搜索IP",IDC_STATIC_SEARCH_BY_IP,26,75,64,13
+    LTEXT           "扫描网络",IDC_STATIC_SEARCH,27,55,64,12
+    LTEXT           "添加设备:",IDC_STATIC_ADD,16,34,61,12
+    LTEXT           "搜索IP范围",IDC_STATIC_SEARCH_BY_IPRANGE,26,95,64,13
+    LTEXT           "设备监控提供了针对设备和串口的数据转发流量统计。",IDC_STATIC_MONITOR_LABLE,18,110,77,58
+END
+
+IDD_SEARCH DIALOGEX 0, 0, 321, 231
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "搜索当前网络中的设备"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "搜索",IDC_BTN_SEARCH,257,7,49,34
+    LTEXT           "扫描中....",IDC_SEARCHING_STATIC,15,55,290,123,WS_BORDER,WS_EX_DLGMODALFRAME
+    LTEXT           "",IDC_SEARCH_RESULT_STATIC,7,187,231,13
+    PUSHBUTTON      "关闭",IDOK,139,204,56,21
+    GROUPBOX        "提示",IDC_STATIC,7,42,307,142,BS_FLAT,WS_EX_TRANSPARENT
+    LTEXT           "搜索当前计算机所有区域网中的设备(最多4个子网)",IDC_STATIC,7,17,221,19
+END
+
+IDD_SEARCH_IP DIALOGEX 0, 0, 315, 151
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST
+CAPTION "指定IP添加设备"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "关闭",IDOK,135,130,50,17
+    LTEXT           "请输入IP地址：",IDC_STATIC,7,20,58,13
+    CONTROL         "",IDC_LIST_DEVICE,"SysListView32",LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,0,93,314,34
+    DEFPUSHBUTTON   "搜索",IDC_BTN_SEARCH,249,2,54,45
+    LTEXT           "",IDC_STATIC_SEARCH_RESULT,35,41,200,13
+    CONTROL         "",IDC_IPADDRESS_IP_SEARCH,"SysIPAddress32",WS_TABSTOP,74,20,122,14
+    LTEXT           "扫描中....",IDC_SEARCHING_STATIC,11,60,294,21,WS_BORDER,WS_EX_DLGMODALFRAME
+    GROUPBOX        "提示",IDC_STATIC,0,50,314,40
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,0,0,314,127
+END
+
+IDD_DLG_CONFIG DIALOGEX 0, 0, 579, 278
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_OVERLAPPEDWINDOW
+CAPTION "设备配置"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "放弃",IDCANCEL,313,257,74,20
+    DEFPUSHBUTTON   "保存",IDOK,182,257,76,20
+    GROUPBOX        "设备信息",IDC_STATIC,1,1,352,36
+    LTEXT           "设备型号:",IDC_STATIC,59,9,40,11
+    LTEXT           "SC5083",IDC_DLG_DEV_TYPE,114,9,59,12
+    LTEXT           "串口数目:",IDC_STATIC,61,24,40,11
+    LTEXT           "8",IDC_DLG_DEV_PORTNUM,114,22,49,9
+    LTEXT           "软件版本:",IDC_STATIC,186,10,40,11
+    LTEXT           "V100R001C00",IDC_DLG_DEV_VERSION,254,9,71,13
+    LTEXT           "运行时间:",IDC_STATIC,186,23,39,11
+    LTEXT           "2013-03-20 09:20:20",IDC_DLG_DEV_UPTIME,253,22,76,10
+    CONTROL         "",IDC_TAB_CONFIG,"SysTabControl32",TCS_MULTILINE,0,41,578,214
+    LTEXT           "Static",IDC_STATIC_DUMMY,3,62,564,189,SS_SUNKEN | NOT WS_VISIBLE
+    GROUPBOX        "控制",IDC_STATIC,366,1,212,36
+    PUSHBUTTON      "重启设备",IDC_BTN_REBOOT,397,11,82,20
+    PUSHBUTTON      "保存配置",IDC_BTN_DEV_SAVEDATA,484,11,83,20
+END
+
+IDD_DLG_BASIC_PAGE DIALOGEX 0, 0, 577, 199
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "基本信息",IDC_STATIC_BASIC,7,3,415,33
+    GROUPBOX        "设备时间",IDC_STATIC_NETWORK,7,38,417,45
+    LTEXT           "设备名称",IDC_STATIC_SYSNAME,54,17,47,11
+    LTEXT           "设备时间",IDC_STATIC_TIME,54,65,47,11
+    LTEXT           "时       区",IDC_STATIC_TIME2,250,47,34,11
+    LTEXT           "IP    地址",IDC_STATIC_IP_ADDRESS,252,96,35,11
+    LTEXT           "子网掩码",IDC_STATIC_IP_ADDRESS2,250,122,37,11
+    LTEXT           "网       关",IDC_STATIC_IP_GATEWAY,251,109,38,13
+    EDITTEXT        IDC_EDIT_SYSNAME,108,15,215,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_COMBO_TIMEZONE,289,46,129,129,CBS_DROPDOWNLIST | CBS_SORT | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "设备日期",IDC_STATIC_TIME3,54,50,47,11
+    LTEXT           "（不能为空，不支持中文）",IDC_STATIC,324,17,97,11
+    CONTROL         "",IDC_DATETIMEPICKER_DEVDATE,"SysDateTimePick32",DTS_RIGHTALIGN | DTS_LONGDATEFORMAT | WS_DISABLED | WS_TABSTOP,99,46,129,14,WS_EX_CLIENTEDGE
+    CONTROL         "",IDC_DATETIMEPICKER_DEVTIME,"SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | WS_DISABLED | WS_TABSTOP | 0x8,99,63,130,14,WS_EX_CLIENTEDGE
+    CONTROL         "",IDC_IPADDRESS1,"SysIPAddress32",WS_TABSTOP,290,95,128,13
+    CONTROL         "",IDC_IPADDRESS2,"SysIPAddress32",WS_TABSTOP,290,120,128,13
+    CONTROL         "",IDC_IPADDRESS3,"SysIPAddress32",WS_TABSTOP,290,107,128,13
+    GROUPBOX        "网络配置",IDC_STATIC_NETWORK2,7,85,417,101
+    CONTROL         357,IDC_PIC_PRODUCT,"Static",SS_BITMAP | SS_CENTERIMAGE,427,7,134,140,WS_EX_DLGMODALFRAME | WS_EX_TRANSPARENT | WS_EX_CLIENTEDGE
+    CTEXT           "Lan1",IDC_STATIC_IP_ADDRESS3,40,105,27,16,SS_SUNKEN | WS_BORDER,WS_EX_DLGMODALFRAME
+    CONTROL         "手动配置",IDC_NET1_MODE_STATIC,"Button",BS_AUTORADIOBUTTON | WS_GROUP,153,99,59,9
+    CONTROL         "DHCP动态获取",IDC_NET1_DHCP,"Button",BS_AUTORADIOBUTTON,153,119,67,9
+    CTEXT           "Lan2",IDC_STATIC_IP_ADDRESS4,40,147,28,15,WS_BORDER,WS_EX_DLGMODALFRAME
+    CONTROL         "手动配置",IDC_NET2_MODE_STATIC,"Button",BS_AUTORADIOBUTTON | WS_GROUP,153,145,43,9
+    CONTROL         "DHCP动态获取",IDC_NET2_DHCP,"Button",BS_AUTORADIOBUTTON,153,163,61,9
+    LTEXT           "IP    地址",IDC_STATIC_IP_ADDRESS5,252,142,35,11
+    LTEXT           "子网掩码",IDC_STATIC_IP_ADDRESS6,250,168,37,11
+    LTEXT           "网       关",IDC_STATIC_IP_GATEWAY2,251,155,38,13
+    CONTROL         "",IDC_IPADDRESS4,"SysIPAddress32",WS_TABSTOP,290,140,128,13
+    CONTROL         "",IDC_IPADDRESS5,"SysIPAddress32",WS_TABSTOP,290,166,128,13
+    CONTROL         "",IDC_IPADDRESS6,"SysIPAddress32",WS_TABSTOP,290,153,128,13
+    LTEXT           "IP分配方式:",IDC_STATIC,83,110,55,10
+    LTEXT           "IP分配方式:",IDC_STATIC,83,151,55,10
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,14,136,403,1,WS_EX_DLGMODALFRAME
+    LTEXT           "",IDC_STATIC_DEV_MODE,444,156,108,23
+END
+
+IDD_DLG_PORT_PAGE DIALOGEX 0, 0, 571, 190
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LIST_PORT1,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_TABSTOP,4,16,409,148,WS_EX_STATICEDGE
+    CONTROL         "",IDC_LIST_PORT2,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_TABSTOP,428,16,135,148,WS_EX_STATICEDGE
+    LTEXT           "串口物理参数",IDC_STATIC,4,3,70,8
+    LTEXT           "串口网络参数",IDC_STATIC,426,5,70,8
+    PUSHBUTTON      "重新设定",IDC_BTN_PORTPARA,363,168,39,18
+    PUSHBUTTON      "重新设定",IDC_BTN_PORTMODE,522,168,41,18
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME | SS_SUNKEN,420,0,1,185
+    LTEXT           "选中端口：",IDC_STATIC,297,171,41,11
+    LTEXT           "选中端口：",IDC_STATIC,425,171,41,11
+    LTEXT           "S",IDC_STATIC_PORTSELECTED_PORTPARA,341,171,14,12
+    LTEXT           "S",IDC_STATIC_PORTSELECTED_PORTMODE,469,171,12,13
+    PUSHBUTTON      "设定所有端口",IDC_BTN_CONFIG_ALLPORT,11,168,70,17,WS_DISABLED
+END
+
+IDD_DLG_PORTPARA_CONFIG DIALOGEX 0, 0, 231, 231
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "串口参数配置"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "保存",IDOK,41,209,50,19
+    LTEXT           "波特率",IDC_STATIC,29,86,59,11
+    COMBOBOX        IDC_COMBO_BAUD_RATE,89,84,109,144,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "奇偶校验位",IDC_STATIC_PARITY,29,181,55,11
+    LTEXT           " 数据位",IDC_STATIC,29,122,54,11
+    COMBOBOX        IDC_COMBO_PARITY,89,179,109,117,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_DATA_BITES,89,122,110,114,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           " 停止位",IDC_STATIC,29,142,54,11
+    COMBOBOX        IDC_COMBO_STOP_BITS,89,141,110,102,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "接口模式",IDC_STATIC,29,104,54,11
+    LTEXT           "流控",IDC_STATIC,29,163,54,11
+    COMBOBOX        IDC_COMBO_FLOWCONTROL,89,160,110,100,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_INTERFACE,89,103,109,102,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "放弃",IDCANCEL,118,209,50,20
+    LTEXT           "别名：",IDC_STATIC,17,38,27,15
+    GROUPBOX        "端口物理参数",IDC_STATIC,15,72,201,128
+    EDITTEXT        IDC_EDIT1,47,36,145,13,ES_AUTOHSCROLL
+    LTEXT           "中英文均可，最多64字节",IDC_STATIC,49,52,125,13
+    LTEXT           "端口使能",IDC_STATIC,13,12,37,16
+    CONTROL         "打开",IDC_RADIO_PORTSWITCH_ON,"Button",BS_AUTORADIOBUTTON | WS_GROUP,75,9,43,15
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,6,28,219,178
+    CONTROL         "关闭",IDC_RADIO_PORTSWITCH_OFF,"Button",BS_AUTORADIOBUTTON,131,10,43,15
+END
+
+IDD_SEARCH_IPRANGE DIALOGEX 0, 0, 317, 269
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "指定IP范围搜索设备"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "关闭",IDOK,133,247,50,18
+    GROUPBOX        "",IDC_STATIC,7,0,303,214
+    PUSHBUTTON      "搜索",IDC_BTN_SEARCH,249,15,54,47
+    CONTROL         "",IDC_LIST_DEVICE,"SysListView32",LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,160,303,83
+    LTEXT           "",IDC_STATIC_SEARCH_RESULT,11,144,234,14
+    CONTROL         "",IDC_IPADDRESS1,"SysIPAddress32",WS_TABSTOP,74,25,131,15
+    CONTROL         "",IDC_IPADDRESS2,"SysIPAddress32",WS_TABSTOP,74,42,131,15
+    LTEXT           "开始",IDC_STATIC,46,27,26,13
+    LTEXT           "结束",IDC_STATIC,45,45,22,13
+    GROUPBOX        "输入条件（IP范围）",IDC_STATIC,7,10,218,53
+    LTEXT           "扫描中....",IDC_SEARCHING_STATIC,14,76,289,61,WS_BORDER,WS_EX_DLGMODALFRAME
+    GROUPBOX        "提示",IDC_STATIC,7,65,303,76
+END
+
+IDD_DLG_COM_CONSOLE DIALOGEX 0, 0, 514, 257
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "串口终端"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_COMBO_DEVICE,43,17,87,107,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_PORT,43,40,87,84,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "选择设备端口",IDC_STATIC,7,0,129,82
+    LTEXT           "设备:",IDC_STATIC,18,18,23,13
+    LTEXT           "端口:",IDC_STATIC,18,41,21,13
+    GROUPBOX        "接收设置",IDC_STATIC,7,95,129,91
+    CONTROL         "ASCII",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,18,109,55,11
+    CONTROL         "HEX",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,81,109,44,11
+    CONTROL         "自动换行",IDC_CHECK_AUTOWRAP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,19,125,87,13
+    CONTROL         "显示发送",IDC_CHECK_SHOWSENDMSG,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,19,145,87,13
+    CONTROL         "显示时间",IDC_CHECK_SHOWTIME,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,19,165,87,13
+    GROUPBOX        "其它操作",IDC_STATIC,7,187,129,63
+    PUSHBUTTON      "清除",IDC_BTN_CLEAR,33,211,81,18
+    EDITTEXT        IDC_EDIT_MSG,144,3,361,205,ES_MULTILINE | ES_AUTOVSCROLL | ES_WANTRETURN | NOT WS_BORDER | WS_VSCROLL,WS_EX_DLGMODALFRAME | WS_EX_STATICEDGE
+    EDITTEXT        IDC_EDIT_SENDMSG,145,214,306,35,ES_MULTILINE | ES_AUTOVSCROLL
+    PUSHBUTTON      "发送",IDC_BTN_SEND,458,211,47,39
+    PUSHBUTTON      "连接",IDC_BTN_CONNECT,34,60,78,17
+END
+
+IDD_DLG_MONITOR DIALOGEX 0, 0, 437, 138
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "设备监控"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LIST_CHANNEL_STATIC,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,7,423,99
+    PUSHBUTTON      "确定",IDC_BTN_OK,197,108,71,23
+END
+
+IDD_DLG_CHANNELMODE_PAGE DIALOGEX 0, 0, 480, 189
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "工作模式",IDC_STATIC,20,48,45,11
+    COMBOBOX        IDC_PORT_WORKMODE,70,47,132,76,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "模式参数",IDC_GROUP_WORKMODE_PARAM,16,71,280,69
+    LTEXT           "监听端口",IDC_STATIC_TCPSERVER_PORT,338,20,36,14,NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_TCP_LISTENPORT1,415,21,58,14,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    LTEXT           "UDP监听端口",IDC_STATIC_UDP_PORT,340,110,49,15
+    EDITTEXT        IDC_EDIT_UDP_PORT,423,109,50,14,ES_AUTOHSCROLL
+    LTEXT           "目标主机",IDC_STATIC_TCPCLIENT_HOST,312,71,33,8
+    EDITTEXT        IDC_EDIT_TARGET_HOST_PORT1,428,86,45,12,ES_AUTOHSCROLL
+    LTEXT           "端口",IDC_STATIC_TCPCLIENT_PORT,370,89,17,8
+    LTEXT           "最大连接数",IDC_STATIC_TCPSERVER_MAXCONN,330,39,46,12
+    COMBOBOX        IDC_COMBO_TCPSERVER_MAXCONN,415,39,58,76,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "目标主机",IDC_STATIC_UDPCLIENT_HOST,318,144,33,8
+    LTEXT           "端口",IDC_STATIC_UDPCLIENT_PORT,373,159,17,8
+    EDITTEXT        IDC_EDIT_UDPCLIENT_PORT,428,158,45,12,ES_AUTOHSCROLL
+    LTEXT           "网络通道使能",IDC_STATIC,7,9,53,11
+    CONTROL         "打开",IDC_RADIO_CHANNEL_ENABLE,"Button",BS_AUTORADIOBUTTON | WS_GROUP,80,7,57,14
+    CONTROL         "关闭",IDC_RADIO_CHANNEL_DISABLE,"Button",BS_AUTORADIOBUTTON,148,7,57,14
+    GROUPBOX        "通道配置",IDC_STATIC_GROUP_CHANNEL,7,30,296,114
+    LTEXT           "1",IDC_STATIC_POS1,60,91,74,15,NOT WS_VISIBLE | WS_BORDER
+    LTEXT           "3",IDC_STATIC_POS2,140,89,134,15,NOT WS_VISIBLE | WS_BORDER
+    LTEXT           "2",IDC_STATIC_POS3,60,110,72,15,NOT WS_VISIBLE | WS_BORDER
+    LTEXT           "4",IDC_STATIC_POS4,140,109,132,15,NOT WS_VISIBLE | WS_BORDER
+    CONTROL         "",IDC_IPADDRESS_TCPCLIENT_HOST,"SysIPAddress32",WS_TABSTOP,355,69,118,14
+    CONTROL         "",IDC_IPADDRESS_UDPCLIENT_HOST,"SysIPAddress32",WS_TABSTOP,358,142,115,14
+END
+
+IDD_DLG_PORT_CHANNEL DIALOGEX 0, 0, 335, 223
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "取消",IDCANCEL,193,197,50,19
+    CONTROL         "",IDC_TAB1,"SysTabControl32",0x0,0,23,334,166
+    LTEXT           "",IDC_STATIC_TABVIEW,11,42,310,145
+    CTEXT           "打开的网络通道数目：",IDC_STATIC_PORT_CHANNEL_NUM,0,0,334,22,SS_SUNKEN
+    DEFPUSHBUTTON   "保存",IDOK,97,197,50,20
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "CompanyName", "TODO: <公司名>"
+            VALUE "FileDescription", "ART"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "ART.exe"
+            VALUE "LegalCopyright", "TODO: (C) <公司名>。保留所有权利。"
+            VALUE "OriginalFilename", "ART.exe"
+            VALUE "ProductName", "TODO: <产品名>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 224
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 139
+    END
+
+    IDR_MAINFRAME, DIALOG
+    BEGIN
+    END
+
+    IDD_ARTTASKVIEW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 107
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 180
+    END
+
+    IDD_SEARCH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 314
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 225
+    END
+
+    IDD_SEARCH_IP, DIALOG
+    BEGIN
+        RIGHTMARGIN, 314
+        BOTTOMMARGIN, 148
+    END
+
+    IDD_DLG_CONFIG, DIALOG
+    BEGIN
+        RIGHTMARGIN, 578
+        BOTTOMMARGIN, 277
+    END
+
+    IDD_DLG_BASIC_PAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 568
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 195
+    END
+
+    IDD_DLG_PORT_PAGE, DIALOG
+    BEGIN
+        RIGHTMARGIN, 563
+        BOTTOMMARGIN, 185
+    END
+
+    IDD_DLG_PORTPARA_CONFIG, DIALOG
+    BEGIN
+        RIGHTMARGIN, 225
+        BOTTOMMARGIN, 230
+    END
+
+    IDD_SEARCH_IPRANGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 310
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 265
+    END
+
+    IDD_DLG_COM_CONSOLE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 505
+        BOTTOMMARGIN, 250
+    END
+
+    IDD_DLG_MONITOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 430
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 131
+    END
+
+    IDD_DLG_CHANNELMODE_PAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 473
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 182
+    END
+
+    IDD_DLG_PORT_CHANNEL, DIALOG
+    BEGIN
+        RIGHTMARGIN, 334
+        BOTTOMMARGIN, 216
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_HAND_CUR            CURSOR                  "res\\HAND.CUR"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDP_OLE_INIT_FAILED     "OLE 初始化失败。请确保 OLE 库是正确的版本。"
+END
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "ART administrator"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_APP_TITLE       "ART adminitrator"
+    AFX_IDS_IDLEMESSAGE     "就绪"
+END
+
+STRINGTABLE
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+    ID_INDICATOR_TIME       "系统时间"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_NEW             "创建新文档\n新建"
+    ID_FILE_OPEN            "打开现有文档\n打开"
+    ID_FILE_CLOSE           "关闭活动文档\n关闭"
+    ID_FILE_SAVE            "保存活动文档\n保存"
+    ID_FILE_SAVE_AS         "用新名称保存活动文档\n另存为"
+END
+
+STRINGTABLE
+BEGIN
+    ID_APP_ABOUT            "显示程序信息、版本号和版权信息\n关于"
+    ID_APP_EXIT             "退出应用程序；提示保存文档\n退出软件"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_MRU_FILE1       "打开此文档"
+    ID_FILE_MRU_FILE2       "打开此文档"
+    ID_FILE_MRU_FILE3       "打开此文档"
+    ID_FILE_MRU_FILE4       "打开此文档"
+    ID_FILE_MRU_FILE5       "打开此文档"
+    ID_FILE_MRU_FILE6       "打开此文档"
+    ID_FILE_MRU_FILE7       "打开此文档"
+    ID_FILE_MRU_FILE8       "打开此文档"
+    ID_FILE_MRU_FILE9       "打开此文档"
+    ID_FILE_MRU_FILE10      "打开此文档"
+    ID_FILE_MRU_FILE11      "打开此文档"
+    ID_FILE_MRU_FILE12      "打开此文档"
+    ID_FILE_MRU_FILE13      "打开此文档"
+    ID_FILE_MRU_FILE14      "打开此文档"
+    ID_FILE_MRU_FILE15      "打开此文档"
+    ID_FILE_MRU_FILE16      "打开此文档"
+END
+
+STRINGTABLE
+BEGIN
+    ID_NEXT_PANE            "切换到下一个窗格\n下一窗格"
+    ID_PREV_PANE            "切换回上一个窗格\n上一窗格"
+END
+
+STRINGTABLE
+BEGIN
+    ID_WINDOW_SPLIT         "将活动窗口拆分为多个窗格\n拆分"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_CLEAR           "清除所选内容\n清除"
+    ID_EDIT_CLEAR_ALL       "清除全部内容\n全部清除"
+    ID_EDIT_COPY            "复制所选内容，将其放入剪贴板\n复制"
+    ID_EDIT_CUT             "剪切所选内容，将其放入剪贴板\n剪切"
+    ID_EDIT_FIND            "查找指定的文本\n查找"
+    ID_EDIT_PASTE           "插入剪贴板内容\n粘贴"
+    ID_EDIT_REPEAT          "重复上一操作\n重复"
+    ID_EDIT_REPLACE         "用其他文本替换特定的文本\n替换"
+    ID_EDIT_SELECT_ALL      "选定整个文档\n全选"
+    ID_EDIT_UNDO            "撤消上一操作\n撤消"
+    ID_EDIT_REDO            "重做上次撤消的操作\n重做"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_TOOLBAR         "显示或隐藏工具栏\n切换工具栏"
+    ID_VIEW_STATUS_BAR      "显示或隐藏状态栏\n切换状态栏"
+    ID_VIEW_AUTOARRANGE     "以网格方式排列图标。"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCSIZE          "更改窗口大小"
+    AFX_IDS_SCMOVE          "更改窗口位置"
+    AFX_IDS_SCMINIMIZE      "将窗口缩小成图标"
+    AFX_IDS_SCMAXIMIZE      "将窗口放大到最大尺寸"
+    AFX_IDS_SCNEXTWINDOW    "切换到下一个文档窗口"
+    AFX_IDS_SCPREVWINDOW    "切换到上一个文档窗口"
+    AFX_IDS_SCCLOSE         "关闭活动窗口并提示保存文档"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCRESTORE       "将窗口恢复到正常大小"
+    AFX_IDS_SCTASKLIST      "激活任务列表"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_SMALLICON       "使用小图标显示各项。\n小图标"
+    ID_VIEW_LARGEICON       "使用大图标显示各项。\n大图标"
+    ID_VIEW_LIST            "以列表方式显示各项。\n列表"
+    ID_VIEW_DETAILS         "显示窗口中每一项的相关详细信息。\n详细信息"
+    ID_VIEW_LINEUP          "以网格方式排列图标。"
+    ID_VIEW_BYNAME          "按字母顺序对图标排序。"
+END
+
+STRINGTABLE
+BEGIN
+    ID_CONFIG               "添加和配置设备\n配置"
+    ID_MONITOR              "监控设备的运行状态\n设备监控"
+    ID_PORTMONITOR          "监控设备端口的运行状态\n端口监控"
+    ID_COMMAPING            "将设备串口映射成计算机虚拟串口\n端口映射"
+END
+
+#endif    // 中文(简体，中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#include "res\ART.rc2"  // 非 Microsoft Visual C++ 编辑的资源
+#include "l.CHS\afxres.rc"      // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

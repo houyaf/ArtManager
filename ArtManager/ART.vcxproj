@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D06C2942-7DD2-4BE3-835B-0C0ADE4CC9CD}</ProjectGuid>
+    <RootNamespace>ART</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+    <ProjectName>ART Administrator</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110_xp</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ART.h" />
+    <ClInclude Include="ARTBasicPage.h" />
+    <ClInclude Include="ARTChannelConfig.h" />
+    <ClInclude Include="ARTCOMConsole.h" />
+    <ClInclude Include="ARTCOMMapping.h" />
+    <ClInclude Include="ARTCOMPortParaConfigDlg.h" />
+    <ClInclude Include="ARTConfigDlg.h" />
+    <ClInclude Include="ARTConfigView.h" />
+    <ClInclude Include="ARTDevSearchTask.h" />
+    <ClInclude Include="ARTDlgMonitor.h" />
+    <ClInclude Include="ARTDlgPortChannel.h" />
+    <ClInclude Include="ARTDoc.h" />
+    <ClInclude Include="ARTLog.h" />
+    <ClInclude Include="ARTMonitor.h" />
+    <ClInclude Include="ARTMonitorLog.h" />
+    <ClInclude Include="ARTMonitorTask.h" />
+    <ClInclude Include="ARTMsgLog.h" />
+    <ClInclude Include="ARTPortMonitor.h" />
+    <ClInclude Include="ARTPortPage.h" />
+    <ClInclude Include="ARTSearchDlg.h" />
+    <ClInclude Include="ARTSearchIPDlg.h" />
+    <ClInclude Include="ARTSearchIPMaskDlg.h" />
+    <ClInclude Include="ARTSearchIPRange.h" />
+    <ClInclude Include="ARTTaskView.h" />
+    <ClInclude Include="ARTUIThread.h" />
+    <ClInclude Include="ARTView.h" />
+    <ClInclude Include="BaseTabCtrl.h" />
+    <ClInclude Include="ChannelStatistics.h" />
+    <ClInclude Include="COMM.h" />
+    <ClInclude Include="CommonFunc.h" />
+    <ClInclude Include="COMP.h" />
+    <ClInclude Include="DataDefine.h" />
+    <ClInclude Include="Device.h" />
+    <ClInclude Include="DevManager.h" />
+    <ClInclude Include="Dmdcp.h" />
+    <ClInclude Include="EnTabCtrl.h" />
+    <ClInclude Include="LABEL.H" />
+    <ClInclude Include="Log.h" />
+    <ClInclude Include="LogManager.h" />
+    <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="NetScanEngine.h" />
+    <ClInclude Include="Port.h" />
+    <ClInclude Include="PortChannel.h" />
+    <ClInclude Include="RealCOMPortMode.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="TCPClientPortMode.h" />
+    <ClInclude Include="TCPServerPortMode.h" />
+    <ClInclude Include="Tlv.h" />
+    <ClInclude Include="UDPPortMode.h" />
+    <ClInclude Include="XEvent.h" />
+    <ClInclude Include="XSocket.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ART.cpp" />
+    <ClCompile Include="ARTBasicPage.cpp" />
+    <ClCompile Include="ARTChannelConfig.cpp" />
+    <ClCompile Include="ARTCOMConsole.cpp" />
+    <ClCompile Include="ARTCOMMapping.cpp" />
+    <ClCompile Include="ARTCOMPortParaConfigDlg.cpp" />
+    <ClCompile Include="ARTConfigDlg.cpp" />
+    <ClCompile Include="ARTConfigView.cpp" />
+    <ClCompile Include="ARTDevSearchTask.cpp" />
+    <ClCompile Include="ARTDlgMonitor.cpp" />
+    <ClCompile Include="ARTDlgPortChannel.cpp" />
+    <ClCompile Include="ARTDoc.cpp" />
+    <ClCompile Include="ARTLog.cpp" />
+    <ClCompile Include="ARTMonitor.cpp" />
+    <ClCompile Include="ARTMonitorLog.cpp" />
+    <ClCompile Include="ARTMonitorTask.cpp" />
+    <ClCompile Include="ARTMsgLog.cpp" />
+    <ClCompile Include="ARTPortMonitor.cpp" />
+    <ClCompile Include="ARTPortPage.cpp" />
+    <ClCompile Include="ARTSearchDlg.cpp" />
+    <ClCompile Include="ARTSearchIPDlg.cpp" />
+    <ClCompile Include="ARTSearchIPMaskDlg.cpp" />
+    <ClCompile Include="ARTSearchIPRange.cpp" />
+    <ClCompile Include="ARTTaskView.cpp" />
+    <ClCompile Include="ARTUIThread.cpp" />
+    <ClCompile Include="ARTView.cpp" />
+    <ClCompile Include="BaseTabCtrl.cpp" />
+    <ClCompile Include="ChannelStatistics.cpp" />
+    <ClCompile Include="COMM.cpp" />
+    <ClCompile Include="CommonFunc.cpp" />
+    <ClCompile Include="COMP.cpp" />
+    <ClCompile Include="DataDefine.cpp" />
+    <ClCompile Include="Device.cpp" />
+    <ClCompile Include="DevManager.cpp" />
+    <ClCompile Include="Dmdcp.cpp" />
+    <ClCompile Include="EnTabCtrl.cpp" />
+    <ClCompile Include="LABEL.CPP" />
+    <ClCompile Include="Log.cpp" />
+    <ClCompile Include="LogManager.cpp" />
+    <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="NetScanEngine.cpp" />
+    <ClCompile Include="Port.cpp" />
+    <ClCompile Include="PortChannel.cpp" />
+    <ClCompile Include="RealCOMPortMode.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="TCPClientPortMode.cpp" />
+    <ClCompile Include="TCPServerPortMode.cpp" />
+    <ClCompile Include="Tlv.cpp" />
+    <ClCompile Include="UDPPortMode.cpp" />
+    <ClCompile Include="XEvent.cpp" />
+    <ClCompile Include="XSocket.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ART.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\ART.rc2" />
+    <None Include="res\HAND.CUR" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\16.ico" />
+    <Image Include="res\24.ico" />
+    <Image Include="res\64.ico" />
+    <Image Include="res\96.bmp" />
+    <Image Include="res\96.ico" />
+    <Image Include="res\ART.ico" />
+    <Image Include="res\ARTDoc.ico" />
+    <Image Include="res\ART_48.ico" />
+    <Image Include="res\configure_32.bmp" />
+    <Image Include="res\configure_32.ico" />
+    <Image Include="res\device.ico" />
+    <Image Include="res\exit.bmp" />
+    <Image Include="res\exit.ico" />
+    <Image Include="res\icon1.ico" />
+    <Image Include="res\icon2.ico" />
+    <Image Include="res\monitor_32.bmp" />
+    <Image Include="res\monitor_32.ico" />
+    <Image Include="res\network.bmp" />
+    <Image Include="res\Port-mapping_32.bmp" />
+    <Image Include="res\Port-mapping_32.ico" />
+    <Image Include="res\port.ico" />
+    <Image Include="res\PortMonitor_32.bmp" />
+    <Image Include="res\PortMonitor_32.ico" />
+    <Image Include="res\SC5083.bmp" />
+    <Image Include="res\Toolbar.bmp" />
+    <Image Include="res\toolbar1.bmp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="ART.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,447 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Controls">
+      <UniqueIdentifier>{7b5c02e8-3817-42e9-b12d-9536c6faea0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataModel">
+      <UniqueIdentifier>{1f777ae0-d156-4f08-9152-245d4bac7f77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{d789dd31-19ca-4868-a096-3106e291548d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Task">
+      <UniqueIdentifier>{8d91e92e-ea6c-443e-b840-2eaa950a6221}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Socket">
+      <UniqueIdentifier>{6904abcd-8356-4615-a23d-cfca7e465aee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CommProtocol">
+      <UniqueIdentifier>{30ad849e-8c8a-4e1d-a530-bc8604c0a576}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ART.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MainFrm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ARTDoc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ARTConfigView.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ARTLog.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ARTView.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ARTMonitor.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ARTPortMonitor.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ARTCOMMapping.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ARTMsgLog.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ARTTaskView.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="LABEL.H">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="ARTSearchIPDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ARTConfigDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ARTBasicPage.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ARTPortPage.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ARTCOMPortParaConfigDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Device.h">
+      <Filter>DataModel</Filter>
+    </ClInclude>
+    <ClInclude Include="DevManager.h">
+      <Filter>DataModel</Filter>
+    </ClInclude>
+    <ClInclude Include="Port.h">
+      <Filter>DataModel</Filter>
+    </ClInclude>
+    <ClInclude Include="RealCOMPortMode.h">
+      <Filter>DataModel</Filter>
+    </ClInclude>
+    <ClInclude Include="TCPClientPortMode.h">
+      <Filter>DataModel</Filter>
+    </ClInclude>
+    <ClInclude Include="TCPServerPortMode.h">
+      <Filter>DataModel</Filter>
+    </ClInclude>
+    <ClInclude Include="UDPPortMode.h">
+      <Filter>DataModel</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonFunc.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="DataDefine.h">
+      <Filter>DataModel</Filter>
+    </ClInclude>
+    <ClInclude Include="ARTSearchIPRange.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ARTUIThread.h">
+      <Filter>Task</Filter>
+    </ClInclude>
+    <ClInclude Include="ARTDevSearchTask.h">
+      <Filter>Task</Filter>
+    </ClInclude>
+    <ClInclude Include="ARTSearchIPMaskDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ARTSearchDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ARTMonitorTask.h">
+      <Filter>Task</Filter>
+    </ClInclude>
+    <ClInclude Include="Log.h">
+      <Filter>DataModel</Filter>
+    </ClInclude>
+    <ClInclude Include="LogManager.h">
+      <Filter>DataModel</Filter>
+    </ClInclude>
+    <ClInclude Include="XEvent.h">
+      <Filter>Socket</Filter>
+    </ClInclude>
+    <ClInclude Include="XSocket.h">
+      <Filter>Socket</Filter>
+    </ClInclude>
+    <ClInclude Include="ARTMonitorLog.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="COMM.h">
+      <Filter>DataModel</Filter>
+    </ClInclude>
+    <ClInclude Include="Tlv.h">
+      <Filter>CommProtocol</Filter>
+    </ClInclude>
+    <ClInclude Include="COMP.h">
+      <Filter>CommProtocol</Filter>
+    </ClInclude>
+    <ClInclude Include="NetScanEngine.h">
+      <Filter>Socket</Filter>
+    </ClInclude>
+    <ClInclude Include="ARTCOMConsole.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ARTDlgMonitor.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Dmdcp.h">
+      <Filter>CommProtocol</Filter>
+    </ClInclude>
+    <ClInclude Include="PortChannel.h">
+      <Filter>DataModel</Filter>
+    </ClInclude>
+    <ClInclude Include="ARTDlgPortChannel.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ARTChannelConfig.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="EnTabCtrl.h">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseTabCtrl.h">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="ChannelStatistics.h">
+      <Filter>DataModel</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ART.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFrm.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ARTDoc.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ARTConfigView.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ARTLog.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ARTView.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ARTMonitor.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ARTPortMonitor.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ARTCOMMapping.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ARTMsgLog.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ARTTaskView.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="LABEL.CPP">
+      <Filter>Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="ARTSearchIPDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ARTConfigDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ARTBasicPage.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ARTPortPage.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ARTCOMPortParaConfigDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Device.cpp">
+      <Filter>DataModel</Filter>
+    </ClCompile>
+    <ClCompile Include="DevManager.cpp">
+      <Filter>DataModel</Filter>
+    </ClCompile>
+    <ClCompile Include="Port.cpp">
+      <Filter>DataModel</Filter>
+    </ClCompile>
+    <ClCompile Include="RealCOMPortMode.cpp">
+      <Filter>DataModel</Filter>
+    </ClCompile>
+    <ClCompile Include="TCPClientPortMode.cpp">
+      <Filter>DataModel</Filter>
+    </ClCompile>
+    <ClCompile Include="TCPServerPortMode.cpp">
+      <Filter>DataModel</Filter>
+    </ClCompile>
+    <ClCompile Include="UDPPortMode.cpp">
+      <Filter>DataModel</Filter>
+    </ClCompile>
+    <ClCompile Include="CommonFunc.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="DataDefine.cpp">
+      <Filter>DataModel</Filter>
+    </ClCompile>
+    <ClCompile Include="ARTSearchIPRange.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ARTUIThread.cpp">
+      <Filter>Task</Filter>
+    </ClCompile>
+    <ClCompile Include="ARTDevSearchTask.cpp">
+      <Filter>Task</Filter>
+    </ClCompile>
+    <ClCompile Include="ARTSearchIPMaskDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ARTSearchDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ARTMonitorTask.cpp">
+      <Filter>Task</Filter>
+    </ClCompile>
+    <ClCompile Include="Log.cpp">
+      <Filter>DataModel</Filter>
+    </ClCompile>
+    <ClCompile Include="LogManager.cpp">
+      <Filter>DataModel</Filter>
+    </ClCompile>
+    <ClCompile Include="XEvent.cpp">
+      <Filter>Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="XSocket.cpp">
+      <Filter>Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="ARTMonitorLog.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="COMM.cpp">
+      <Filter>DataModel</Filter>
+    </ClCompile>
+    <ClCompile Include="Tlv.cpp">
+      <Filter>CommProtocol</Filter>
+    </ClCompile>
+    <ClCompile Include="COMP.cpp">
+      <Filter>CommProtocol</Filter>
+    </ClCompile>
+    <ClCompile Include="NetScanEngine.cpp">
+      <Filter>Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="ARTCOMConsole.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ARTDlgMonitor.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Dmdcp.cpp">
+      <Filter>CommProtocol</Filter>
+    </ClCompile>
+    <ClCompile Include="PortChannel.cpp">
+      <Filter>DataModel</Filter>
+    </ClCompile>
+    <ClCompile Include="ARTDlgPortChannel.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ARTChannelConfig.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="EnTabCtrl.cpp">
+      <Filter>Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseTabCtrl.cpp">
+      <Filter>Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="ChannelStatistics.cpp">
+      <Filter>DataModel</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ART.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\ART.rc2">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\HAND.CUR">
+      <Filter>资源文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\ARTDoc.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\ART.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Toolbar.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\toolbar1.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\configure_32.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\exit.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\monitor_32.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Port-mapping_32.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\PortMonitor_32.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\icon1.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\configure_32.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\exit.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\monitor_32.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Port-mapping_32.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\PortMonitor_32.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\ART_48.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\network.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\96.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\96.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\device.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\64.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\icon2.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\16.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\24.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\port.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\SC5083.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
