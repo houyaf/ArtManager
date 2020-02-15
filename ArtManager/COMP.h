@@ -1,0 +1,429 @@
+﻿#pragma once
+
+#define   SERIALSERV_COM_NUM      8
+#define   SERIALSERV_COM_START    ESDP_MODULE_ID_COM0 
+#define   SERIALSERV_COM_END      (ESDP_MODULE_ID_COM0 + SERIALSERV_COM_NUM)
+
+
+#define   SERIALSERV_COM_SERVPORT     50000   /* COM口作为server端默认端口号 数据传输 */
+
+#define   SERIALSERV_COM_CFGPORT      50000   /* COM口作为server端默认端口号 管理配置 */
+
+#define   SERIALSERV_COM_INVALIDHANDLE         0XFFFFFFFF
+
+#define   SERIALSERV_COM_INVALIDTIDTHREAD      0XFFFFFFFF
+
+#define   SERIALSERV_INVALIDCHANNELID          0XFFFFFFFF
+
+
+#define   SERIALSERV_COM_READBUFLEN   512
+
+#define   SERIALSERV_COM_FORMATLEN    8
+
+#define   SERIALSERV_COM_BAUDRATENUM  23
+
+#define   SERIALSERV_COM_SHOWBUFFLEN  16
+
+#define   SERIALSERV_NAMELEN_MAX      16
+
+#define   SERIALSERV_DEVICEPATCH_MAX  128
+
+#define   SERIALSERV_BRINDEX_DEFAULT  13
+
+#define   SERIALSERV_COMLINKNUM_MAX   6
+
+#define   SERIALSERV_SERVERACCESSNUM_MAX    6
+#define   SERIALSERV_CLIENTACCESSNUM_MAX    1
+
+
+
+typedef enum SERIALSERVDATATYPE
+{
+    SERIALSERV_OPERATION_OID,          /*0 操作oid, ULONG类型, 长度:4 */        
+    SERIALSERV_OPERATION_TYPE,         /*1 操作类型具体参见枚举 SERIALSERVOPTYPE_ENUM, 长度:1 */
+    SERIALSERV_OPERATION_OBJECT,       /*2 操作对象, ULONG类型, 长度:4 */
+    SERIALSERV_OPERATION_RESULT,       /*3 操作结果, 具体参见枚举 SERIALSERVOPRESULT_ENUM, 长度:4 */ 
+
+    /* 串口配置数据 begin */
+    SERIALSERV_CFG_SWITCH,             /*4 开关具体见枚举 SERIALSERVCFGSWTICH_ENUM, 长度:1 */
+    SERIALSERV_CFG_COMNAME,            /*5 com名称, 长度:SERIALSERV_NAMELEN_MAX - 1， 15 */
+    
+    SERIALSERV_CFG_PORTMODE,           /*6 串口类型具体见枚举 SERIALSERVCFGPORTMODE_ENUM, 长度:1 */
+    SERIALSERV_CFG_WORKMODE,           /*7 串口工作模式具体见枚举 SERIALSERVCFGWORKMODE_ENUM, 长度:1 */
+    SERIALSERV_CFG_BAUDRATE,           /*8 串口波特率, ULONG类型, 长度:4 */
+    SERIALSERV_CFG_PARITYBIT,          /*9 数据校验位, SERIALSERVCFGPARITYBIT_ENUM, 长度:1 */
+    SERIALSERV_CFG_DATABIT,            /*10 数据位, SERIALSERVCFGDATABIT_ENUM, 长度:1 */
+    SERIALSERV_CFG_STOPBIT,            /*11 停止位, SERIALSERVCFGSTOPBIT_ENUM, 长度:1 */
+    SERIALSERV_CFG_FLOWCTL,            /*   流控,   SERIALSERVCFGFLOWCTL_ENUM, 长度:1 */
+    
+    SERIALSERV_CFG_OPMODE,             /*12 操作类型具体见枚举 SERIALSERVCFGOPMODE_ENUM, 长度:1 */
+    SERIALSERV_CFG_COMIP,              /*13 COM IP, ULONG类型, 长度:4 */ 
+    SERIALSERV_CFG_COMPORT,            /*14 COM PORT, USHORT类型, 长度:2 */ 
+
+    SERIALSERV_CFG_OPMODE1,             /*15 操作类型具体见枚举 SERIALSERVCFGOPMODE_ENUM, 长度:1 */
+    SERIALSERV_CFG_COMIP1,              /*16 COM IP, ULONG类型, 长度:4 */ 
+    SERIALSERV_CFG_COMPORT1,            /*17 COM PORT, USHORT类型, 长度:2 */ 
+    SERIALSERV_CFG_CONNECTNUM1,         /*18 CHANNEL CONNECT NUM, ULONG类型, 长度:4 */
+    SERIALSERV_CFG_CHANNELSWITCH1,      /*19 CHANNEL 开关 SERIALSERVCHANNELSWITCH_ENUM, 长度:1 */
+
+    SERIALSERV_CFG_OPMODE2,             /*20 操作类型具体见枚举 SERIALSERVCFGOPMODE_ENUM, 长度:1 */
+    SERIALSERV_CFG_COMIP2,              /*21 COM IP, ULONG类型, 长度:4 */ 
+    SERIALSERV_CFG_COMPORT2,            /*22 COM PORT, USHORT类型, 长度:2 */ 
+    SERIALSERV_CFG_CONNECTNUM2,         /*23 CHANNEL CONNECT NUM, ULONG类型, 长度:5 */
+	SERIALSERV_CFG_CHANNELSWITCH2,		/*24 CHANNEL 开关 SERIALSERVCHANNELSWITCH_ENUM, 长度:1 */
+
+    SERIALSERV_CFG_OPMODE3,             /*25 操作类型具体见枚举 SERIALSERVCFGOPMODE_ENUM, 长度:1 */
+    SERIALSERV_CFG_COMIP3,              /*26 COM IP, ULONG类型, 长度:4 */ 
+    SERIALSERV_CFG_COMPORT3,            /*27 COM PORT, USHORT类型, 长度:2 */ 
+    SERIALSERV_CFG_CONNECTNUM3,         /*28 CHANNEL CONNECT NUM, ULONG类型, 长度:5 */
+	SERIALSERV_CFG_CHANNELSWITCH3,		/*29 CHANNEL 开关 SERIALSERVCHANNELSWITCH_ENUM, 长度:1 */
+
+    SERIALSERV_CFG_OPMODE4,             /*30 操作类型具体见枚举 SERIALSERVCFGOPMODE_ENUM, 长度:1 */
+    SERIALSERV_CFG_COMIP4,              /*31 COM IP, ULONG类型, 长度:4 */ 
+    SERIALSERV_CFG_COMPORT4,            /*32 COM PORT, USHORT类型, 长度:2 */ 
+    SERIALSERV_CFG_CONNECTNUM4,         /*33 CHANNEL CONNECT NUM, ULONG类型, 长度:5 */
+	SERIALSERV_CFG_CHANNELSWITCH4,		/*34 CHANNEL 开关 SERIALSERVCHANNELSWITCH_ENUM, 长度:1 */
+
+    SERIALSERV_CFG_OPMODE5,             /*35 操作类型具体见枚举 SERIALSERVCFGOPMODE_ENUM, 长度:1 */
+    SERIALSERV_CFG_COMIP5,              /*36 COM IP, ULONG类型, 长度:4 */ 
+    SERIALSERV_CFG_COMPORT5,            /*37 COM PORT, USHORT类型, 长度:2 */ 
+    SERIALSERV_CFG_CONNECTNUM5,         /*38 CHANNEL CONNECT NUM, ULONG类型, 长度:5 */
+	SERIALSERV_CFG_CHANNELSWITCH5,		/*39 CHANNEL 开关 SERIALSERVCHANNELSWITCH_ENUM, 长度:1 */
+
+
+    SERIALSERV_CFG_OPMODE6,             /*40 操作类型具体见枚举 SERIALSERVCFGOPMODE_ENUM, 长度:1 */
+    SERIALSERV_CFG_COMIP6,              /*41 COM IP, ULONG类型, 长度:4 */ 
+    SERIALSERV_CFG_COMPORT6,            /*42 COM PORT, USHORT类型, 长度:2 */  
+    SERIALSERV_CFG_CONNECTNUM6,         /*43 CHANNEL CONNECT NUM, ULONG类型, 长度:5 */
+	SERIALSERV_CFG_CHANNELSWITCH6,		/*44 CHANNEL 开关 SERIALSERVCHANNELSWITCH_ENUM, 长度:1 */
+
+	SERIALSERV_CFG_CHANNELNUM ,         /*45 ChANNEL NUMBER*/
+    /* 串口配置数据 end */
+
+    /* 串口统计数据 begin */
+    
+    SERIALSERV_STA_CHANNELNO,           /*46 COM CHANNELNO, UCHAR类型, 长度:1 */ 
+
+    SERIALSERV_STA_SENDNUM,             /*47 发送报文个数,  ULONG类型, 长度:4 */ 
+    SERIALSERV_STA_SENDSIZE,            /*48 发送报文大小,  ULONG类型, 长度:4 */
+
+    SERIALSERV_STA_RECNUM,              /*49 接收报文个数,  ULONG类型, 长度:4 */ 
+    SERIALSERV_STA_RECSIZE,             /*50 接收报文大小,  ULONG类型, 长度:4 */
+
+    SERIALSERV_STA_LINKNUM,             /*51 链路个数,      ULONG类型, 长度:4 */
+
+    SERIALSERV_STA_REMOTEIP,             /*52 远端IP,       ULONG类型, 长度:4 */
+    SERIALSERV_STA_REMOTEPORT,           /*53 远端PORT,     USHORT类型,长度:2 */
+
+    /* 串口统计数据 end */
+
+    /* 系统配置参数 begin */
+    SERIALSERV_SYSPARA_DATATIME,       /*55 系统时间:1970以来的秒数, ULONG类型, 长度:4 */
+    SERIALSERV_SYSPARA_SYSNAME,        /*56 sysname,最大长度为 SYS_SYSNAMElEN_MAX - 1 */
+    SERIALSERV_SYSPARA_IP,             /*57 IP, ULONG类型, 长度:4 */ 
+    SERIALSERV_SYSPARA_IPMASK,         /*58 IP Subnet Mask, ULONG类型, 长度:4 */ 
+    SERIALSERV_SYSPARA_MAC,            /*60 MAC 长度:6*/ 
+    SERIALSERV_SYSPARA_SWVERSION,      /*61 SW version, srting类型 长度:SYS_SYSVERSION_MAX - 1 */
+    SERIALSERV_SYSPARA_UPTIME,         /*62 系统启动时间:1970以来的毫秒, ULONG类型, 长度:4 */
+    SERIALSERV_SYSPARA_DEVICEMODEL,    /*63 设备类型,具体参见枚举 SERIALSERVSYSPARADEVICEMODEL_ENUM, 长度:4 */
+    SERIALSERV_SYSPARA_DEVREBOOT,      /*64 设备重启, 长度:0 */
+    SERIALSERV_SYSPARA_SAVETODB,       /*65 保存信息到数据库, 长度:0 */
+    /* 系统配置参数 end */
+
+    SERIALSERV_INFO_HEART,             /* 心跳消息,具体见枚举 SERIALSERVINFOHEART_ENUM, 长度:1 */
+    
+    /* 设备配置参数 begin */
+	SERIALSERV_SYSPARA_DEVPORTNUM,     /*54 Port数目, 长度:1 */
+
+    SERIALSERV_SYSPARA_NETMODE_1,      /*57 Lan1 net mode, 具体参见枚举 SERIALSERVSYSPARANETMODE_ENUM, 长度:1 */ 
+    SERIALSERV_SYSPARA_IP_1,           /*57 Lan1 IP, ULONG类型, 长度:4 */ 
+    SERIALSERV_SYSPARA_IPMASK_1,       /*58 Lan1 IP Subnet Mask, ULONG类型, 长度:4 */ 
+	SERIALSERV_SYSPARA_GATEWAY_1,      /*59 Lan1 IP GateWay, ULONG类型, 长度:4 */ 
+
+    SERIALSERV_SYSPARA_NETMODE_2,      /*57 Lan2 net mode, 具体参见枚举 SERIALSERVSYSPARANETMODE_ENUM, 长度:1 */ 
+    SERIALSERV_SYSPARA_IP_2,           /*57 Lan2 IP, ULONG类型, 长度:4 */ 
+    SERIALSERV_SYSPARA_IPMASK_2,       /*58 Lan2 IP Subnet Mask, ULONG类型, 长度:4 */ 
+	SERIALSERV_SYSPARA_GATEWAY_2,      /*59 Lan2 IP GateWay, ULONG类型, 长度:4 */   
+    /* 设备配置参数 end */
+
+
+    SERIALSERV_TLVTYPE_MAX
+           
+}SERIALSERVDATATYPE_ENUM;
+
+
+typedef enum SERIALSERVINFOHEART
+{
+    SERIALSERV_HEART_REQUEST = 0, 
+
+    SERIALSERV_HEART_ACK, 
+
+    SERIALSERV_HEART_MAX 
+}SERIALSERVINFOHEART_ENUM;
+
+typedef enum SERIALSERVSYSPARADEVICEMODEL
+{
+    SERIALSERV_DEVICEMODEL_SC5083 = 0,
+
+
+
+    SERIALSERV_DEVICEMODEL_MAX
+    
+}SERIALSERVSYSPARADEVICEMODEL_ENUM;
+
+typedef enum SERIALSERVSYSPARADEVICELAN
+{
+    SERIALSERV_DEVICELAN_1 = 0,
+
+    SERIALSERV_DEVICELAN_2,
+
+
+
+    SERIALSERV_DEVICELAN_MAX
+    
+}SERIALSERVSYSPARADEVICELAN_ENUM;
+
+typedef enum SERIALSERVSYSPARANETMODE
+{
+    SERIALSERV_DEVICEIPMODE_STATIC = 0,
+
+    SERIALSERV_DEVICEIPMODE_DHCP,
+
+
+
+    SERIALSERV_DEVICEIPMODE_MAX
+    
+}SERIALSERVSYSPARANETMODE_ENUM;
+
+typedef enum SERIALSERVSYSPARANETPARA
+{
+    SERIALSERV_DEVICENET_MODE = 0,
+
+    SERIALSERV_DEVICENET_IP,
+
+    SERIALSERV_DEVICENET_MASK,
+
+    SERIALSERV_DEVICENET_GATEWAY,
+
+
+
+    SERIALSERV_DEVICENET_MAX
+    
+}SERIALSERVSYSPARANETPARA_ENUM;
+
+
+typedef enum SERIALSERVCFGPROTOCALTYPE
+{
+    SERIALSERV_PROTOCALTYPE_TCP = 0,
+
+    SERIALSERV_PROTOCALTYPE_UDP,
+
+    SERIALSERV_PROTOCALTYPE_MAX
+           
+}SERIALSERVCFGPROTOCALTYPE_ENUM;
+
+typedef enum SERIALSERVCFGSERVICETYPE
+{
+    SERIALSERV_SERVICETYPE_CLIENT = 0,
+
+    SERIALSERV_SERVICETYPE_SERVER,
+
+    SERIALSERV_SERVICETYPE_MAX
+    
+}SERIALSERVCFGSERVICETYPE_ENUM;
+
+typedef enum SERIALSERVCFGOPMODE
+{
+    SERIALSERV_OPMODE_TCPSERVER = 0,
+
+    SERIALSERV_OPMODE_TCPCLIENT,
+
+    SERIALSERV_OPMODE_UDPSERVER,
+
+    SERIALSERV_OPMODE_UDPCLIENT,
+
+    SERIALSERV_OPMODE_REALCOM,
+
+    SERIALSERV_OPMODE_MAX
+    
+}SERIALSERVCFGOPMODE_ENUM;
+
+
+typedef enum SERIALSERVCHANNELSWITCH
+{
+    SERIALSERV_CHANNELSWITCH_OFF = 0,
+    
+	SERIALSERV_CHANNELSWITCH_ON,
+	
+    SERIALSERV_CHANNELSWITCH_MAX   
+    
+}SERIALSERVCHANNELSWITCH_ENUM;
+
+
+typedef enum SERIALSERVCFGWORKMODE
+{
+    SERIALSERV_WORKMODE_RA = 0,   /* 应答模式 */
+
+    SERIALSERV_WORKMODE_NRA,      /* 非应答模式 */
+
+    SERIALSERV_WORKMODE_MAX
+           
+}SERIALSERVCFGWORKMODE_ENUM;
+
+typedef enum SERIALSERVCFGPARITYBIT
+{
+    SERIALSERV_PARITYBIT_NONE,    /* 无校验 */
+        
+    SERIALSERV_PARITYBIT_ODD,     /* 奇校验 */
+
+    SERIALSERV_PARITYBIT_EVEN,   /* 偶校验 */
+
+
+    SERIALSERV_PARITYBIT_MAX
+}SERIALSERVCFGPARITYBIT_ENUM;
+
+typedef enum SERIALSERVCFGDATABIT
+{
+    SERIALSERV_DATABIT_CS5,
+    SERIALSERV_DATABIT_CS6,
+    SERIALSERV_DATABIT_CS7,
+    SERIALSERV_DATABIT_CS8,
+
+    SERIALSERV_DATABIT_MAX
+           
+}SERIALSERVCFGDATABIT_ENUM;
+
+typedef enum SERIALSERVCFGSTOPBIT
+{
+  SERIALSERV_STOPBIT_1, 
+  SERIALSERV_STOPBIT_2, 
+
+  SERIALSERV_STOPBIT_MAX 
+}SERIALSERVCFGSTOPBIT_ENUM;
+
+typedef enum SERIALSERVCFGFLOWCTL
+{
+  SERIALSERV_FLOWCTL_NONE = 0, 
+  SERIALSERV_FLOWCTL_HW, 
+  SERIALSERV_FLOWCTL_SW, 
+
+  SERIALSERV_FLOWCTL_MAX 
+}SERIALSERVCFGFLOWCTL_ENUM;
+
+typedef enum SERIALSERVCFGPORTMODE
+{
+    SERIALSERV_PORTMODE_RS232 = 0,
+
+    SERIALSERV_PORTMODE_RS422,
+
+    SERIALSERV_PORTMODE_RS485,
+
+    SERIALSERV_PORTMODE_MAX
+           
+}SERIALSERVCFGPORTMODE_ENUM;
+
+typedef enum SERIALSERVCFGSWTICH
+{
+    SERIALSERV_SWITCH_OFF = 0,
+
+    SERIALSERV_SWITCH_ON,
+
+    SERIALSERV_SWITCH_MAX
+           
+}SERIALSERVCFGSWTICH_ENUM;
+
+typedef enum SERIALSERVOPTYPE
+{
+    SERIALSERV_OPTYPE_GET = 0,
+
+    SERIALSERV_OPTYPE_GETRESPOND,
+
+    SERIALSERV_OPTYPE_SET,
+    
+    SERIALSERV_OPTYPE_SETRESPOND,
+
+    SERIALSERV_OPTYPE_TRAP,
+
+
+    SERIALSERV_OPTYPE_MAX
+           
+}SERIALSERVOPTYPE_ENUM;
+
+typedef enum SERIALSERVOPRESULT
+{
+    SERIALSERV_OPRESULT_OK = 0,  
+
+    SERIALSERV_ERR_OBJECT,            /* 操作对象错误 */
+    SERIALSERV_ERR_INTERNAL,          /* 内部错误 */
+
+    SERIALSERV_ERR_CFGOKRESTARTDEV,   /* 配置成功,需要重启设备生效 */
+
+    SERIALSERV_ERR_COMLINK,           /* 为com通讯创建链路失败 */
+    SERIALSERV_ERR_OPENCOM,           /* 打开com口失败 */
+    SERIALSERV_ERR_CLOSECOM,          /* 关闭com口失败 */
+    SERIALSERV_ERR_COMTHREAD,         /* 为com创建线程失败 */
+    SERIALSERV_ERR_MODIFYPHY,         /* 修改物理参数失败 */
+    SERIALSERV_ERR_BAUDRATEVALUE,     /* 波特率取值错误 */
+    SERIALSERV_ERR_PARITYBITVALUE,    /* 数据校验位取值错误 */
+    SERIALSERV_ERR_DATABITVALUE,      /* 数据位取值错误 */
+    SERIALSERV_ERR_STOPBITVALUE,      /* 停止位取值错误 */
+    SERIALSERV_ERR_FLOWCTLVALUE,      /* 流控取值错误 */
+
+
+    SERIALSERV_OPRESULT_MAX
+    
+}SERIALSERVOPRESULT_ENUM;
+
+
+
+/****************************************************************************************************************/
+/****************************************************************************************************************/
+
+
+#define  COMP_MSG_MAX_SIZE             4*1024
+
+#define  SYS_SYSNAMElEN_MAX  16  /* sysname最大长度 */
+
+//创建Device Get消息报文
+
+extern VOID* COMP_CreateGetMsgOfDevice();
+extern VOID* COMP_CreateGetMsgOfDeviceNetwork1();
+extern VOID* COMP_CreateGetMsgOfDeviceNetwork2();
+
+//创建Port Get消息报文
+extern VOID* COMP_CreateGetMsgOfPort(ULONG ulCOMNo);
+
+//创建Device Set消息报文
+extern VOID *COMP_CreateSetMsgofDevice();
+
+//创建Port Set消息报文
+extern VOID *COMP_CreateSetMsgofPort(ULONG ulComNo);
+
+//获取GetResponse消息报文中的单个参数信息
+extern ULONG COMP_GetSubOption(void *pMsgPkg, unsigned long ulType, void *pValue);
+
+//配置Set消息报文中的单个参数信息
+extern ULONG COMP_SetSubOption(void *pMsgPkg, unsigned long ulType, unsigned long ulLen, void *pValue);
+
+//获取响应消息报文中的结果信息
+extern ULONG COMP_GetResult(VOID *pMsgPkg);
+
+//获取响应消息报文中的结果信息
+extern ULONG  COMP_SetEndOfMsg(VOID *pMsgPkg);
+
+//心跳Get报文
+extern VOID *COMP_CreateHeartMsg();
+
+//释放Msg报文
+extern VOID COMP_FreeMsg(VOID *pMsg);
+
+extern ULONG COMP_GetMsgSize(VOID *pMsgPkg);
+
+extern VOID *COMP_GetMsgData(VOID *pMsgPkg);
+
+extern VOID *COMP_GetPortChannelStatistics(ULONG ulPort, UCHAR ucChannel);
+
+class CChannelStatistics;
+
+extern VOID COMP_GetPortChannelStisticData(VOID *pMsg, CChannelStatistics *pChannelStatic);
+
